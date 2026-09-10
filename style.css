@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  color: hsl(0, 0%, 0%);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Header / Nav ---------- */
+
+header {
+  position: relative;
+}
+
+.header-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  z-index: 10;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#open-menu img {
+  width: 22px;
+}
+
+/* Mobile nav drawer (hidden by default, off-canvas) */
+
+#menu-principal {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 27%, 0.714);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 10;
+}
+
+#menu{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 3em 1.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#menu-principal.open {
+  transform: translateY(0);
+}
+
+
+#close-menu img {
+  width: 1.4em;
+}
+
+#menu-principal ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.2em;
+}
+
+#menu-principal a {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/* ---------- Hero carousel ---------- */
+
+.hero {
+  position: relative;
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero picture {
+  display: none;
+}
+
+.hero-nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.hero-nav button {
+  width: 60px;
+  height: 60px;
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-nav button:hover {
+  background-color: hsl(0, 0%, 27%);
+  cursor: pointer;
+}
+
+.hero-nav img {
+  width: 12px;
+}
+
+/* ---------- Main articles ---------- */
+
+#article-title {
+  display: block;
+}
+
+.article-principale {
+  display: none;
+  padding: 3.5em 1.8em 4em;
+}
+
+
+
+.article-principale h1 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 2.7em;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 24px;
+}
+
+.article-principale p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: hsl(0, 0%, 63%);
+  margin-bottom: 32px;
+}
+
+.shop-now {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.shop-now span {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 0.9em;
+}
+
+.shop-now:hover {
+  color: hsl(0, 0%, 63%);
+}
+
+.shop-now img {
+  width: 40px;
+}
+
+/* ---------- Footer / About ---------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer > img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#about-article {
+  padding: 56px 24px;
+}
+
+#about-article h2 {
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 0%);
+  margin-bottom: 24px;
+}
+
+#about-article p {
+  font-size: 1em;
+  line-height: 1.7;
+  color: hsl(0, 0%, 63%);
+}
+
+/*---------------desktop layout-------------------*/
+@media (min-width: 768px) {
+  body {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+  }
+
+  header {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: visible;
+  }
+
+  main {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  footer {
+    grid-column: 1 / -1;
+  }
+
+  /* ---- desktop nav ---- */
+
+  .header-inner {
+    padding: 2rem;
+  }
+
+  .logo {
+    position: relative;
+    left: 0;
+    transform: none;
+    height: 22px;
+  }
+
+  #open-menu {
+    display: none;
+  }
+
+  #menu-principal {
+    position: static;
+    inset: auto;
+    transform: none;
+    background: none;
+    padding: 0;
+  }
+  #menu{
+    background-color: #ffffff00;
+    padding: 0;
+  }
+  #close-menu {
+    display: none;
+  }
+
+  #menu-principal ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  #menu-principal a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: lowercase;
+    letter-spacing: normal;
+    padding-bottom: 6px;
+    border-bottom: 2px solid transparent;
+  }
+
+  #menu-principal a:hover,
+  #menu-principal a.active {
+    border-bottom-color: #ffffff;
+  }
+
+  .header-inner {
+    justify-content: flex-start;
+    gap: 64px;
+  }
+
+  .logo {
+    order: -1;
+  }
+
+  .hero-nav {
+    bottom: 0;
+    right: -6.68em;
+  }
+
+  .hero-nav button {
+    width: 4em;
+    height: 4em;
+  }
+
+  /* ---- text column ---- */
+
+  #article-title {
+    width: 100%;
+    padding: 2em 3em 6em;
+  }
+
+  .article-principale {
+    padding: 0;
+  }
+
+  .article-principale h1 {
+    font-size: 2.75em;
+  }
+
+  .article-principale p {
+    max-width: 32em;
+  }
+
+  .shop-now span {
+    font-size: 0.95em;
+  }
+
+  /* ---- footer / about, 3-column grid ---- */
+
+  footer {
+    display: grid;
+    grid-template-columns: 3fr 4fr 3fr;
+  }
+
+  footer > img {
+    height: 100%;
+  }
+
+  #about-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4em 3em;
+  }
+}
+
+/*----------------affichage des images et articles----------------------------*/
+.article-principale.active {
+  display: block;
+}
+.hero picture.active {
+  display: block;
+}

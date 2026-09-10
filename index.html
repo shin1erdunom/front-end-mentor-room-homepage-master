@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+        <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <img src="images/logo.svg" alt="room" class="logo" />
+        <nav aria-label="Navigation principale">
+          <button
+            type="button"
+            id="open-menu"
+            aria-label="ouvrir le menu"
+            aria-expanded="false"
+          >
+            <img src="images/icon-hamburger.svg" alt="" />
+          </button>
+          <div id="menu-principal">
+            <div id="menu">
+            <button type="button" id="close-menu" aria-label="fermer le menu">
+              <img src="images/icon-close.svg" alt="" />
+            </button>
+            <ul>
+              <li><a href="#">home</a></li>
+              <li><a href="#">shop</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </div>
+          </div>
+        </nav>
+      </div>
+      <div class="hero">
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="images/desktop-image-hero-1.jpg"
+          />
+          <img src="images/mobile-image-hero-1.jpg" alt="" class="hero-1" />
+        </picture>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="images/desktop-image-hero-2.jpg"
+          />
+          <img src="images/mobile-image-hero-2.jpg" alt="" class="hero-2" />
+        </picture>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="images/desktop-image-hero-3.jpg"
+          />
+          <img src="images/mobile-image-hero-3.jpg" alt="" class="hero-3" />
+        </picture>
+        <div class="hero-nav">
+          <button type="button" aria-label="image précédente">
+            <img src="images/icon-angle-left.svg" alt="" />
+          </button>
+          <button type="button" aria-label="image suivante">
+            <img src="images/icon-angle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <article id="article-title">
+        <article id="article-1" class="article-principale">
+          <h1>Discover innovative ways to decorate</h1>
+          <p>
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <button type="button" class="shop-now">
+            <span>SHOP NOW</span>
+            <img src="images/icon-arrow.svg" alt="" />
+          </button>
+        </article>
+        <article id="article-2" class="article-principale">
+          <h1>We are available all across the globe</h1>
+          <p>
+            With stores all over the world, it's easy for you to find furniture
+            for your home or place of business. Locally, we’re in most major
+            cities throughout the country. Find the branch nearest you using our
+            store locator. Any questions? Don't hesitate to contact us today.
+          </p>
+          <button type="button" class="shop-now">
+            <span>SHOP NOW</span>
+            <img src="images/icon-arrow.svg" alt="" />
+          </button>
+        </article>
+        <article id="article-3" class="article-principale">
+          <h1>Manufactured with the best materials</h1>
+          <p>
+            Our modern furniture store provide a high level of quality. Our
+            company has invested in advanced technology to ensure that every
+            product is made as perfect and as consistent as possible. With three
+            decades of experience in this industry, we understand what customers
+            want for their home and office.
+          </p>
+          <button type="button" class="shop-now">
+            <span>SHOP NOW</span>
+            <img src="images/icon-arrow.svg" alt="" />
+          </button>
+        </article>
+      </article>
+    </main>
+
+    <footer>
+      <img src="images/image-about-dark.jpg" alt="" />
+      <article id="about-article">
+        <h2>About our furniture</h2>
+        <p>
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </article>
+      <img src="images/image-about-light.jpg" alt="" />
+    </footer>
+  </body>
+</html>
